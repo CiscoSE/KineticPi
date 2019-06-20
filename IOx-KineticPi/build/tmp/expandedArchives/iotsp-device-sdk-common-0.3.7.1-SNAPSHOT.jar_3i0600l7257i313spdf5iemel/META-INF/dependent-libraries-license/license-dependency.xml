@@ -1,0 +1,35 @@
+<licenses>
+  <license name='Apache 2.0' url='http://www.apache.org/licenses/LICENSE-2.0.txt'>
+    <dependency>gson-2.6.2.jar</dependency>
+  </license>
+  <license name='BSD' url='LICENSE.txt'>
+    <dependency>paranamer-2.3.jar</dependency>
+  </license>
+  <license name='GNU Lesser General Public License, Version 2.1' url='http://www.gnu.org/licenses/lgpl-2.1.html'>
+    <dependency>jackson-annotations-2.3.2.jar</dependency>
+    <dependency>jackson-databind-2.3.2.jar</dependency>
+    <dependency>jackson-core-2.3.2.jar</dependency>
+  </license>
+  <license name='The Apache Software License, Version 2.0' url='http://www.apache.org/licenses/LICENSE-2.0.txt'>
+    <dependency>jackson-annotations-2.3.2.jar</dependency>
+    <dependency>jackson-core-asl-1.9.13.jar</dependency>
+    <dependency>snappy-java-1.0.5.jar</dependency>
+    <dependency>jackson-databind-2.3.2.jar</dependency>
+    <dependency>avro-1.7.7.jar</dependency>
+    <dependency>jackson-mapper-asl-1.9.13.jar</dependency>
+    <dependency>commons-compress-1.4.1.jar</dependency>
+    <dependency>jackson-core-2.3.2.jar</dependency>
+  </license>
+  <license name='MIT License' url='http://www.opensource.org/licenses/mit-license.php'>
+    <dependency>slf4j-api-1.7.13.jar</dependency>
+  </license>
+  <license name='Apache License, Version 2.0' url='http://www.apache.org/licenses/LICENSE-2.0.txt'>
+    <dependency>commons-cli-1.3.jar</dependency>
+  </license>
+  <license name='Apache 2' url='http://www.apache.org/licenses/LICENSE-2.0.txt'>
+    <dependency>ini4j-0.5.1.jar</dependency>
+  </license>
+  <license name='Public Domain'>
+    <dependency>xz-1.0.jar</dependency>
+  </license>
+</licenses>

@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Implementation-Title: iot-edge-rule-engine
+Implementation-Version: 0.3.1.0-SNAPSHOT
+Build-Time-ISO-8601: 2018-05-22T22:07:50+0000
+Created-By: Cisco Systems, Inc.
+

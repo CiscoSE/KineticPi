@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Implementation-Title: iot-edge-rule-engine
+Implementation-Version: 0.4.0.1-SNAPSHOT
+Main-Class: com.cisco.iot.swp.edge.app.RESampleApp
+

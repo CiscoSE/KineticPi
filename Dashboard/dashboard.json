@@ -1,0 +1,225 @@
+{
+	"version": 1,
+	"allow_edit": true,
+	"plugins": [],
+	"panes": [
+		{
+			"title": "Current values",
+			"width": 1,
+			"row": {
+				"3": 1,
+				"4": 1,
+				"5": 9,
+				"6": 1
+			},
+			"col": {
+				"3": -17,
+				"4": 1,
+				"5": 3,
+				"6": 2
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "gauge",
+					"settings": {
+						"title": "Temperature",
+						"value": "datasources[\"Pi\"][\"assetpi\"][\"temperature\"].toFixed(2)",
+						"units": "Celsius",
+						"min_value": "0",
+						"max_value": 100
+					}
+				},
+				{
+					"type": "gauge",
+					"settings": {
+						"title": "Humidity",
+						"value": "datasources[\"Pi\"][\"assetpi\"][\"humidity\"].toFixed(2)",
+						"units": "Relative humidity (%)",
+						"min_value": 0,
+						"max_value": 100
+					}
+				},
+				{
+					"type": "gauge",
+					"settings": {
+						"title": "Pressure (hPa)",
+						"value": "datasources[\"Pi\"][\"assetpi\"][\"pressure\"].toFixed(2)",
+						"units": "hPa",
+						"min_value": "900",
+						"max_value": "1100"
+					}
+				}
+			]
+		},
+		{
+			"width": 1,
+			"row": {
+				"3": 1,
+				"4": 1,
+				"5": 1,
+				"6": 1
+			},
+			"col": {
+				"3": 3,
+				"4": 4,
+				"5": 4,
+				"6": 5
+			},
+			"col_width": 2,
+			"widgets": [
+				{
+					"type": "highcharts-timeseries",
+					"settings": {
+						"timeframe": 60,
+						"blocks": "6",
+						"chartType": "area",
+						"title": "",
+						"xaxis": "{\"title\":{\"text\" : \"Time\"}, \"type\": \"datetime\", \"floor\":0}",
+						"yaxis": "{\"title\":{\"text\" : \"Temperature  (°C)\"}, \"minorTickInterval\":\"auto\", \"floor\":0}",
+						"series1": "datasources[\"Pi\"][\"assetpi\"][\"temperature\"]",
+						"series1label": ""
+					}
+				},
+				{
+					"type": "highcharts-timeseries",
+					"settings": {
+						"timeframe": 60,
+						"blocks": 4,
+						"chartType": "spline",
+						"title": "Pitch historical",
+						"xaxis": "{\"title\":{\"text\" : \"Time\"}, \"type\": \"datetime\", \"floor\":0}",
+						"yaxis": "{\"title\":{\"text\" : \"Humidity (%)\"}, \"minorTickInterval\":\"auto\", \"floor\":0}",
+						"series1": "datasources[\"Pi\"][\"assetpi\"][\"humidity\"]"
+					}
+				},
+				{
+					"type": "highcharts-timeseries",
+					"settings": {
+						"timeframe": 60,
+						"blocks": 4,
+						"chartType": "spline",
+						"title": "",
+						"xaxis": "{\"title\":{\"text\" : \"Time\"}, \"type\": \"datetime\", \"floor\":0}",
+						"yaxis": "{\"title\":{\"text\" : \"Pressure (hPa) \"}, \"minorTickInterval\":\"auto\", \"floor\":0}",
+						"series1": "datasources[\"Pi\"][\"assetpi\"][\"pressure\"]",
+						"series1label": ""
+					}
+				}
+			]
+		},
+		{
+			"title": "Magnetometer Components",
+			"width": 1,
+			"row": {
+				"3": 1,
+				"4": 1,
+				"5": 11,
+				"6": 1
+			},
+			"col": {
+				"3": 1,
+				"4": 1,
+				"5": 1,
+				"6": 1
+			},
+			"col_width": 2,
+			"widgets": [
+				{
+					"type": "highcharts-timeseries",
+					"settings": {
+						"timeframe": 60,
+						"blocks": "8",
+						"chartType": "area",
+						"title": "",
+						"xaxis": "{\"title\":{\"text\" : \"time\"}, \"type\": \"datetime\", \"floor\":0}",
+						"yaxis": "{\"title\":{\"text\" : \"Values\"}, \"minorTickInterval\":\"auto\", \"floor\":0}",
+						"series1": "datasources[\"Pi\"][\"assetpi\"][\"gyroscope\"]",
+						"series1label": "X",
+						"series2": "datasources[\"Pi\"][\"assetpi\"][\"accelerometer\"][\"roll\"]",
+						"series2label": "Y",
+						"series3": "datasources[\"Pi\"][\"assetpi\"][\"accelerometer\"][\"yaw\"]",
+						"series3label": "Z"
+					}
+				}
+			]
+		},
+		{
+			"title": "Gateway Location",
+			"width": 1,
+			"row": {
+				"4": 1,
+				"5": 1
+			},
+			"col": {
+				"4": 1,
+				"5": 1
+			},
+			"col_width": 2,
+			"widgets": [
+				{
+					"type": "google_map",
+					"settings": {
+						"lat": "52.303613",
+						"lon": "4.953097"
+					}
+				}
+			]
+		},
+		{
+			"title": "Warnings",
+			"width": 1,
+			"row": {
+				"5": 1,
+				"6": 1
+			},
+			"col": {
+				"5": 3,
+				"6": 3
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "indicator",
+					"settings": {
+						"title": "Temperature",
+						"value": "datasources[\"Pi\"][\"assetpi\"][\"temperature\"]>51.4",
+						"on_text": "Higher than 51.4",
+						"off_text": "Lower than 51.4"
+					}
+				},
+				{
+					"type": "indicator",
+					"settings": {
+						"title": "Humidity",
+						"value": "datasources[\"Pi\"][\"assetpi\"][\"humidity\"]>11",
+						"on_text": "Higher than 11",
+						"off_text": "Lower than 11"
+					}
+				},
+				{
+					"type": "indicator",
+					"settings": {
+						"title": "Pressure",
+						"value": "datasources[\"Pi\"][\"assetpi\"][\"pressure\"]>1030.25",
+						"on_text": "Higher than 1030.25",
+						"off_text": "Lower than 1030.25"
+					}
+				}
+			]
+		}
+	],
+	"datasources": [
+		{
+			"name": "Pi",
+			"type": "JSON",
+			"settings": {
+				"url": "http://localhost:8003/data.txt",
+				"use_thingproxy": false,
+				"refresh": 1,
+				"method": "GET"
+			}
+		}
+	],
+	"columns": 6
+}

@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Implementation-Title: iot-mqtt-client-edge
+Implementation-Version: 1.0.0.1-SNAPSHOT
+Build-Time-ISO-8601: 2018-06-25T17:57:39+0000
+Created-By: Cisco Systems, Inc.
+

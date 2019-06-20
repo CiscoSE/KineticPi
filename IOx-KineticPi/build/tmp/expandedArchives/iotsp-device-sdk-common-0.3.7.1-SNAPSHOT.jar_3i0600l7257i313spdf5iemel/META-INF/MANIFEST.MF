@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Implementation-Title: iotsp-device-sdk-common
+Implementation-Version: 0.3.7.1-SNAPSHOT
+Build-Time-ISO-8601: 2018-12-09T20:37:47-0800
+Created-By: Cisco Systems, Inc.
+
